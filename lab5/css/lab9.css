@@ -1,0 +1,62 @@
+.tab {
+    overflow: hidden;
+    text-decoration: red;
+    background-color: #29c5e6;
+}
+
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+
+.tab button:hover {
+    background-color: black;
+}
+
+
+.tab button.active {
+    background-color: black;
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+
+    border-top: none;
+}
+p7{
+    margin-bottom: 10px;
+    font-style: oblique;
+    font-size: large;
+}
+.accordion {
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #29c5e6;
+}
+
+
+.panel {
+    padding: 0 18px;
+    background-color: #29c5e5;
+    display: none;
+    overflow: hidden;
+}

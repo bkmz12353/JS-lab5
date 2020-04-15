@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 6</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/lab9.css" type="text/css">
+    <script src="js/lab6.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 5</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 9</h1></div>
+    <section>
+        <blockquote>
+
+            <p>Вкладки+Аккардеон</p>
+
+        </blockquote>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'num1')"><p7>Задание 1</p7></button>
+            <button class="tablinks" onclick="openCity(event, 'num2')"><p7>Задание 2</p7></button>
+            <button class="tablinks" onclick="openCity(event, 'num3')"><p7>Задание 3</p7></button>
+            <button class="tablinks" onclick="openCity(event, 'num4')"><p7>Задание 4</p7></button>
+            <button class="tablinks" onclick="openCity(event, 'num5')"><p7>Задание 5</p7></button>
+        </div>
+        <!-- Tab content -->
+        <div id="num1" class="tabcontent">
+            <h3>Задание 1</h3>
+            <p1>Реализуйте калькулятор. Должны быть кнопки цифр и операций. По нажатию на кнопку '=' должен посчитаться результат</p1>
+        </div>
+
+        <div id="num2" class="tabcontent">
+            <h3>Задание 2</h3>
+            <p1>Реализуйте игру крестики-нолики. Играет два человека, на одном поле по очереди.</p1>
+        </div>
+
+        <div id="num3" class="tabcontent">
+            <h3>Задание 3</h3>
+            <p1>Реализуйте тест, в котором показывается один вопрос, 5 чекбоксов для ответа (может быть несколько правильных ответов). Под чекбоксами ссылка 'следующий вопрос'. По нажатию на эту ссылку вместо текущего вопроса показывается следующий. Когда вопросы заканчиваются, в последнем вопросе будет стоять ссылка не 'следующий вопрос', а 'показать результат'</p1>
+        </div>
+        <div id="num4" class="tabcontent">
+        <h3>Задание 4</h3>
+        <p1>Реализуйте чеклист. Должен быть инпут с добавлением задачи, а над ним - список с задачами. Возле каждой задачи чекбос. Если нажать на чекбокс - задача становится выполненной, перечеркивается и становится серого цвета, чекбокс при этом пропадает. Справа от любой задачи должен быть крестик для удаления этой задачи.</p1>
+    </div>
+        <div id="num5" class="tabcontent">
+            <h3>Задание 5</h3>
+            <p1>Реализуйте автодополнение. Суть: дан, к примеру, массив стран. Дан инпут. Когда вы вводите первые буквы страны под инпутом появляется выпадающий список, в котором расположены страны, которые начинаются на те буквы, которые вы ввели. Чем больше букв вы вводите - тем меньше стран в списке. Страну можно выбрать, кликнув по ней мышкой - в этом случае ее название появится в инпуте. Список стран храните в массиве.</p1>
+        </div>
+        <script src="js/lab9.js"></script>
+
+    <button class="accordion">Задание 6</button>
+    <div class="panel">
+        <p>Сделайте игру. Суть - дана таблица с числами, расположенными в случайном порядке в ячейках таблицы. Числа идут по порядку от 1 до N. Все числа разного размера и цвета. Играющему необходимо по порядку кликать по числам - сначала 1, потом 2 и так далее до N. Когда он кликает на правильную ячейку - она активируется и делает красный фон (предыдущие правильные ячейки не снимают выделение). Должен тикать таймер, на игру дается M секунд. Если не успел найти все числа по порядку - проиграл.</p>
+    </div>
+
+    <button class="accordion">Задание 7</button>
+    <div class="panel">
+        <p>•	Реализуйте попап. Суть: когда пользователь прокручивает страницу вниз на N пикселей - появляется баннер поверх содержимого. Этот баннер можно закрыть на крестик и он пропадет.
+            •	Решите предыдущую задачу, но при условии, что баннер появлятся не по прокрутке, а через N секунд после захода пользователя на страницу.
+        </p>
+    </div>
+
+    <button class="accordion">Задание 8</button>
+    <div class="panel">
+        <p>Реализуйте квадратный календарик (как в винде).</p>
+    </div>
+        <button class="accordion">Задание 9</button>
+        <div class="panel">
+            <p>•	Реализуйте вкладки - нажимая на каждую вкладку мы будем видеть ниже текст, соответствующий этой вкладке.
+                •	Реализуйте аккордеон.</p>
+        </div>
+    <script >var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+
+
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }</script>
+    </section>
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>

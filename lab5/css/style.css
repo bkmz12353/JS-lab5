@@ -1,0 +1,207 @@
+body {
+
+    color: #8f8f8f;
+    font: 12px Tahoma, sans-serif;
+    background-color: #f8f8f8;
+    border-top: 5px solid #7e7e7e;
+    margin: 0;
+}
+
+button {
+    color: #fff;
+    background-color: #29c5e6;
+    border: none;
+    height: 32px;
+    font-family: 'Oswald', sans-serif;
+}
+p {
+    margin: 20px 0;
+}
+
+#wrapper {
+    max-width: 960px;
+    margin: auto;
+}
+header {
+    background: #7e7e7e;
+    color: #dbdbdb;
+    font-size: 11px;
+}
+#header {
+    max-width: 960px;
+    margin: auto;
+    padding: 10px 0;
+    height: 70px;
+}
+footer {
+    background: #7e7e7e;
+    color: #dbdbdb;
+    font-size: 11px;
+}
+
+#footer {
+    max-width: 960px;
+    margin: auto;
+    padding: 10px 0;
+    height: 90px;
+}
+
+
+aside {
+    float: left;
+    width: 250px;
+}
+section {
+    margin-left: 100;
+    padding-bottom: 50px;
+}
+blockquote {
+    margin-left: 100px;
+    margin-right: 100px;
+    background: #29c5e6;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+blockquote1 {
+
+
+    margin: 0;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+blockquote p {
+    color: #fff;
+    font-style: italic;
+    font-size: 33px;
+    margin: 0;
+}
+
+blockquote cite {
+    display: block;
+    font-size: 20px;
+    font-style: normal;
+    color: #1d8ea6;
+    margin: 80;
+    text-align: right;
+}
+
+footer h3 {
+    font: 14px 'Oswald', sans-serif;
+    color: #fff;
+    border-bottom: 1px solid #919191;
+    margin: 0 0 10px 0;
+}
+
+
+
+footer p {
+    margin: 5px 0;
+}
+
+#info{
+    float: left;
+    width: 200px;
+}
+p1{
+    padding: 20px;
+    font-size: large;
+}
+
+
+
+nav li {
+    list-style-position: inside;
+    font: 14px 'Oswald', sans-serif;
+    padding: 10px;
+
+}
+
+.top-menu li {
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 0;
+}
+
+.top-menu li:hover{
+    background: #29c5e6;
+    color: #fff;
+}
+
+.top-menu a:hover {
+    color: #fff;
+}
+.top-menu a {
+    color: black;
+}
+
+span1{
+    color:green;
+}
+span{
+    color: red;
+    size: 20px;
+}
+fieldset{
+    color: black;
+    border: black;
+}
+.container_end {
+    display: none;
+}
+
+
+a.button7 {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    margin: 5px;
+}
+a.button7:hover { background: rgb(53, 167, 110); }
+a.button7:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+a.button8 {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    margin: 5px;
+    display: none;
+}
+a.button8:hover { background: rgb(53, 167, 110); }
+a.button8:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+a.button9 {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    margin: 5px;
+    display: grid;
+}
+a.button9:hover { background: rgb(53, 167, 110); }
+a.button9:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+}

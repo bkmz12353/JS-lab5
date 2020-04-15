@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/lab3.css" type="text/css">
+    <script src="js/lab3.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 5</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 3</h1></div>
+    <section>
+        <blockquote>
+
+            <p> Тест </p>
+
+
+
+        </blockquote>
+        <ul id="test">
+            <li class="question" style="display: block;">
+                Какой сейчас год?
+                <ul>
+                    <li><label><input type="checkbox" data-true="">2020</label></li>
+                    <li><label><input type="checkbox">1999</label></li>
+                    <li><label><input type="checkbox">3450</label></li>
+                </ul>
+            </li>
+            <li class="question" style="display: none;">
+                Сколько месяцев в году?
+                <ul>
+                    <li><label><input type="checkbox">93</label></li>
+                    <li><label><input type="checkbox">1</label></li>
+                    <li><label><input type="checkbox" data-true="">12</label></li>
+                </ul>
+            </li>
+            <li class="question" style="display: none;">
+                Как зовут автора лабораторной?
+                <ul>
+                    <li><label><input type="checkbox">Юля</label></li>
+                    <li><label><input type="checkbox">Александр</label></li>
+                    <li><label><input type="checkbox" data-true="">Илья</label></li>
+                </ul>
+            </li>
+            <li class="question" style="display: none;">
+                Лабораторная сдана?
+                <ul>
+                    <li><label><input type="checkbox">Нет</label></li>
+                    <li><label><input type="checkbox" data-true="">Да</label></li>
+                    <li><label><input type="checkbox" >Нет</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <a id="next" class="button7">Следующий вопрос</a>
+        <a id="next1" class="button">Следующий вопрос</a>
+        <a id="check" class="button7">Проверить</a>
+        <script>
+            var checkEl = document.getElementById('check');
+            var nextEl = document.getElementById('next');
+            var next1El = document.getElementById('next1');
+            next1El.style.display = 'none';
+            var questionsEl = document.getElementsByClassName('question');
+            var result = [];
+            var now = 0;
+            showAnswer();
+            now++;
+            nextEl.addEventListener('click', next);
+            checkEl.addEventListener('click', checkAnswers);
+            function next() {
+                showAnswer();
+                now++
+                if (!questionsEl[now]) {
+                    nextEl.style.display = 'none';
+
+
+                }
+            }
+            function showAnswer() {
+                for (var i = 0; i < questionsEl.length; i++) {
+                    questionsEl[i].style.display = 'none';
+                }
+                questionsEl[now].style.display = 'block';
+            }
+            function checkAnswers() {
+                for (var i = 0; i < questionsEl.length; i++) {
+                    var answers = questionsEl[i].querySelectorAll('input[type=checkbox]');
+                    result.push( checkOneAnswer(answers) );
+                }
+                printResult();
+                result = [];
+            }
+            function checkOneAnswer(answers) {
+                var result = null;
+                var noAnswer = true;
+                for (var i = 0; i < answers.length; i++) {
+                    var isTrue = (answers[i].getAttribute('data-true') !== null);
+                    if (answers[i].checked) {
+                        noAnswer = false;
+                        if (isTrue) {
+                            result = true;
+                        } else {
+                            result = false;
+                        }
+                    } else {
+                        if (isTrue) {
+                            result = false;
+                        }
+                    }
+                }
+                if (noAnswer) {
+                    result = null;
+                }
+                return result;
+            }
+            function printResult() {
+                var trueAnswers = 0;
+                var falseAnswers = 0;
+                var noAnswers = 0;
+                for (var i = 0; i < result.length; i++) {
+                    if (result[i] === true) {
+                        trueAnswers++;
+                    } else if (result[i] === false) {
+                        falseAnswers++;
+                    } else if (result[i] === null) {
+                        noAnswers++;
+                    }
+                }
+                var all = trueAnswers + falseAnswers + noAnswers;
+                var percent = Math.round((trueAnswers/all) * 100);
+                var msg = 'Правильных ответов: ' + trueAnswers + ' (' + percent + '%)\n'
+                    + 'Неправильных ответов: ' + falseAnswers + '\n'
+                    + 'Без ответов: ' + noAnswers + '\n';
+                alert(msg);
+            }
+        </script>
+
+    </section>
+
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>

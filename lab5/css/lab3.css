@@ -1,0 +1,8 @@
+.checkbox{
+    content: "✓";
+    font-size: 35px;
+    color: #3c7e5e;
+    /* Выровняем галочку */
+    display: block;
+    margin-top: -10px;
+}
